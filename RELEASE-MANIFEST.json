@@ -1,0 +1,80 @@
+{
+  "release": "KV260 triple-lane burst-read 250 MHz",
+  "kernel": "lk_coeff_triple",
+  "compute_units": 1,
+  "lanes": 3,
+  "max_features": 150,
+  "patch": [
+    64,
+    64
+  ],
+  "levels": [
+    64,
+    32,
+    16
+  ],
+  "window": [
+    11,
+    11
+  ],
+  "max_iterations_per_level": 7,
+  "squared_update_threshold": 0.01,
+  "clock_mhz": 250,
+  "platform": "kv260_base_202220_custom",
+  "vitis": "2022.2",
+  "vivado": "2022.2.2",
+  "board_runtime_xrt": "2.13.0",
+  "flow_width": 40,
+  "flow_fractional_bits": 32,
+  "input_axi_bits": 512,
+  "output_axi_bits": 64,
+  "reference_tracking_fps": 887.3466848,
+  "reference_sequence": "EuRoC MH_05_difficult, first 1000 adjacent frame pairs",
+  "formal_instrumentation": false,
+  "full_pl_resources": {
+    "total_lut": 52786,
+    "ff": 64279,
+    "dsp": 247,
+    "bram36_equivalent": 106
+  },
+  "cu_resources": {
+    "total_lut": 45535,
+    "ff": 51390,
+    "dsp": 247,
+    "bram36_equivalent": 97.5
+  },
+  "artifacts": {
+    "hardware/firmware/lk-coeff-burst-250/lk_coeff_triple.bit.bin": {
+      "bytes": 7797692,
+      "sha256": "ea66c336207a188ce4366b4dc961a645c707535c42974ecb8bc4a4035e7693b9"
+    },
+    "hardware/firmware/lk-coeff-burst-250/pl.dtbo": {
+      "bytes": 2652,
+      "sha256": "4af479401026990b29bdb0e0fffd5c91d06263f31873a4a1a4c89f24a84eed2e"
+    },
+    "hardware/firmware/lk-coeff-burst-250/shell.json": {
+      "bytes": 42,
+      "sha256": "870c32038d56a0b9ed3bba84c4ce3e458327304568a08d37be7343a78cb1944b"
+    },
+    "hardware/lk_coeff_triple.xclbin": {
+      "bytes": 7916777,
+      "sha256": "080ea84c909480fde9f505a7c9493cade8c7e08b69c07ac46e2c2f318559f013"
+    },
+    "host/benchmark_kv260_lk.cpp": {
+      "bytes": 22436,
+      "sha256": "956c6bf08b34378487c09cf291d53a62f4df0472bf05aaabe7fbb3160521a1ad"
+    },
+    "host/build.sh": {
+      "bytes": 737,
+      "sha256": "05967e5fec3f48cdaf2a2e62da2ba9def6784881362dfaa224f8ef04e3d43887"
+    },
+    "host/kv260_flow.hpp": {
+      "bytes": 503,
+      "sha256": "cd76cfc909b438439ec0f2e647a099e8eb6d85d42795da7167a9f30b2a2fc3ba"
+    },
+    "host/kv260_patch.hpp": {
+      "bytes": 1592,
+      "sha256": "cdacec61b7e8d1a3ee21f0d25bccd07642701aeabca7f696f1cb11059a6982ca"
+    }
+  }
+}
